@@ -8,9 +8,21 @@ allowBuilds:
 overrides:
   oxc-walker: link:.
   vite: "catalog:"
+  vitest: "catalog:"
 
 verifyDepsBeforeRun: install
 trustPolicy: no-downgrade
+trustPolicyExclude:
+  - "vite-plus@0.0.0-commit.bb0445bf5599a389c324442a3f3f8a8a5db5d83d"
+  - "@voidzero-dev/vite-plus-core@0.0.0-commit.bb0445bf5599a389c324442a3f3f8a8a5db5d83d"
+  - "@voidzero-dev/vite-plus-darwin-arm64@0.0.0-commit.bb0445bf5599a389c324442a3f3f8a8a5db5d83d"
+  - "@voidzero-dev/vite-plus-darwin-x64@0.0.0-commit.bb0445bf5599a389c324442a3f3f8a8a5db5d83d"
+  - "@voidzero-dev/vite-plus-linux-arm64-gnu@0.0.0-commit.bb0445bf5599a389c324442a3f3f8a8a5db5d83d"
+  - "@voidzero-dev/vite-plus-linux-arm64-musl@0.0.0-commit.bb0445bf5599a389c324442a3f3f8a8a5db5d83d"
+  - "@voidzero-dev/vite-plus-linux-x64-gnu@0.0.0-commit.bb0445bf5599a389c324442a3f3f8a8a5db5d83d"
+  - "@voidzero-dev/vite-plus-linux-x64-musl@0.0.0-commit.bb0445bf5599a389c324442a3f3f8a8a5db5d83d"
+  - "@voidzero-dev/vite-plus-win32-arm64-msvc@0.0.0-commit.bb0445bf5599a389c324442a3f3f8a8a5db5d83d"
+  - "@voidzero-dev/vite-plus-win32-x64-msvc@0.0.0-commit.bb0445bf5599a389c324442a3f3f8a8a5db5d83d"
 # oxc packages are published by the oxc project itself, so they are exempt from
 # pnpm 11's default `minimumReleaseAge` (1 day) supply-chain gate. Without this,
 # renovate bumps to a freshly released oxc-parser fail `vp install` in CI until
@@ -22,8 +34,10 @@ minimumReleaseAgeExclude:
   - vite-plus
   - "@voidzero-dev/*"
 catalog:
-  vite: npm:@voidzero-dev/vite-plus-core@latest
-  vite-plus: latest
+  vite: npm:@voidzero-dev/vite-plus-core@0.0.0-commit.bb0445bf5599a389c324442a3f3f8a8a5db5d83d
+  vite-plus: 0.0.0-commit.bb0445bf5599a389c324442a3f3f8a8a5db5d83d
+  vitest: 4.1.10
+  "@vitest/coverage-v8": 4.1.10
 peerDependencyRules:
   allowAny:
     - vite
