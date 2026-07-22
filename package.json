@@ -36,11 +36,13 @@
   "devDependencies": {
     "@oxc-project/types": "0.141.0",
     "@types/node": "24.10.3",
-    "@vitest/coverage-v8": "4.1.10",
+    "@vitest/coverage-v8": "catalog:",
     "knip": "^6.0.0",
     "oxc-parser": "0.141.0",
     "typescript": "6.0.3",
-    "vite-plus": "catalog:"
+    "vite": "catalog:",
+    "vite-plus": "catalog:",
+    "vitest": "catalog:"
   },
   "peerDependencies": {
     "@oxc-project/types": ">=0.98.0",
