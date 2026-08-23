@@ -11,6 +11,12 @@ overrides:
 
 verifyDepsBeforeRun: install
 trustPolicy: no-downgrade
+# Ecosystem-ci smoke test only: preview builds are published by the registry
+# bridge without provenance attestation, which trips the no-downgrade check.
+# Real vite-plus npm releases are published with provenance.
+trustPolicyExclude:
+  - vite-plus
+  - "@voidzero-dev/*"
 # oxc packages are published by the oxc project itself, so they are exempt from
 # pnpm 11's default `minimumReleaseAge` (1 day) supply-chain gate. Without this,
 # renovate bumps to a freshly released oxc-parser fail `vp install` in CI until
