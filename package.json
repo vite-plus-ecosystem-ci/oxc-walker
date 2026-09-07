@@ -33,12 +33,14 @@
   "devDependencies": {
     "@oxc-project/types": "0.148.0",
     "@types/node": "24.10.3",
-    "@vitest/coverage-v8": "4.1.11",
+    "@vitest/coverage-v8": "catalog:",
     "@vue/compiler-sfc": "3.5.42",
     "knip": "^6.0.0",
     "oxc-parser": "0.148.0",
     "typescript": "7.0.2",
-    "vite-plus": "catalog:"
+    "vite": "catalog:",
+    "vite-plus": "catalog:",
+    "vitest": "catalog:"
   },
   "peerDependencies": {
     "@oxc-project/types": ">=0.98.0",
