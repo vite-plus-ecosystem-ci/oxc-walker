@@ -7,7 +7,8 @@ allowBuilds:
 
 overrides:
   oxc-walker: link:.
-  vite: "catalog:"
+  vite@*: "catalog:"
+  vitest@*: "catalog:"
 
 verifyDepsBeforeRun: install
 trustPolicy: no-downgrade
@@ -22,8 +23,10 @@ minimumReleaseAgeExclude:
   - vite-plus
   - "@voidzero-dev/*"
 catalog:
-  vite: npm:@voidzero-dev/vite-plus-core@latest
-  vite-plus: latest
+  vite: npm:@voidzero-dev/vite-plus-core@0.0.0-commit.6b5bbcaf494b963b67950e77a7673de21ba9c6d5
+  vite-plus: 0.0.0-commit.6b5bbcaf494b963b67950e77a7673de21ba9c6d5
+  vitest: 4.1.11
+  "@vitest/coverage-v8": 4.1.11
 peerDependencyRules:
   allowAny:
     - vite
@@ -31,3 +34,6 @@ peerDependencyRules:
   allowedVersions:
     vite: "*"
     vitest: "*"
+trustPolicyExclude:
+  - vite-plus
+  - "@voidzero-dev/*"
