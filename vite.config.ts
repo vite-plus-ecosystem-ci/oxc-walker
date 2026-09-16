@@ -11,6 +11,7 @@ export default defineConfig({
     },
   },
   test: {
+    clearMocks: false,
     coverage: {
       include: ["src"],
       reporter: ["text", "json", "html"],
