@@ -7,11 +7,15 @@ allowBuilds:
 
 overrides:
   oxc-walker: link:.
-  vite: "catalog:"
+  vite@*: "catalog:"
+  vitest@*: "catalog:"
 
 verifyDepsBeforeRun: install
 trustPolicy: no-downgrade
 trustPolicyExclude:
+  # ecosystem-ci smoke test: preview builds carry no provenance and are brand new
+  - vite-plus
+  - "@voidzero-dev/*"
   - vite-plus@1.0.0-rc.0
   - "@voidzero-dev/vite-plus-*"
 # oxc packages are published by the oxc project itself, so they are exempt from
@@ -29,8 +33,10 @@ minimumReleaseAgeExclude:
   - oxlint
   - "@oxlint/*"
 catalog:
-  vite: npm:@voidzero-dev/vite-plus-core@1.0.0-rc.0
-  vite-plus: 1.0.0-rc.0
+  vite: npm:@voidzero-dev/vite-plus-core@0.0.0-commit.dd71b05c0f66a3529d0da591363c1ee6be3ec17d
+  vite-plus: 0.0.0-commit.dd71b05c0f66a3529d0da591363c1ee6be3ec17d
+  vitest: 5.0.1
+  "@vitest/coverage-v8": 5.0.1
 peerDependencyRules:
   allowAny:
     - vite
