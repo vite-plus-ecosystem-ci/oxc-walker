@@ -12,6 +12,9 @@ overrides:
 verifyDepsBeforeRun: install
 trustPolicy: no-downgrade
 trustPolicyExclude:
+  # ecosystem-ci smoke test: preview builds carry no provenance and are brand new
+  - vite-plus
+  - '@voidzero-dev/*'
   - vite-plus@1.0.0-rc.0
   - "@voidzero-dev/vite-plus-*"
 # oxc packages are published by the oxc project itself, so they are exempt from
