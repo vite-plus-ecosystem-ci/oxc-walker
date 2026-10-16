@@ -22,6 +22,16 @@ trustPolicyExclude:
 # renovate bumps to a freshly released oxc-parser fail `vp install` in CI until
 # the packages are 24h old.
 minimumReleaseAgeExclude:
+  # ecosystem-ci smoke test: preview builds and freshly pinned toolchain packages
+  - oxlint-tsgolint
+  - "@oxlint-tsgolint/*"
+  - vitest
+  - "@vitest/*"
+  - tinybench
+  - yuku-core
+  - yuku-parser
+  - "@yuku-core/*"
+  - "@yuku-toolchain/*"
   - oxc-parser
   - "@oxc-parser/*"
   - "@oxc-project/*"
